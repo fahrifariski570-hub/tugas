@@ -1,0 +1,504 @@
+/* Education Page Styles */
+
+/* Education Header */
+.education-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #D946EF 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-top: 80px;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.25);
+}
+
+.education-header .header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Fraunces', serif;
+}
+
+.education-header .header-content p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+.education-header i {
+    margin-right: 10px;
+}
+
+/* Search Section */
+.search-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #f0f3f7 100%);
+    padding: 40px 0;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.search-box .form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    padding: 12px 20px 12px 45px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-box .form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+    outline: none;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+}
+
+/* Category Filters */
+.category-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid #e0e0e0;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #333;
+    animation: fade-in 0.6s ease-out;
+}
+
+.filter-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.35);
+    animation: scale-in 0.3s ease-out;
+}
+
+/* Education Content */
+.education-content {
+    padding: 60px 0;
+    min-height: 70vh;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* Article Card */
+.article-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f0f0f0;
+    position: relative;
+    animation: fade-in-up 0.6s ease-out;
+}
+
+.article-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    animation: width-expand 0.8s ease-out;
+}
+
+.article-card[data-category="mood"]::before {
+    background: linear-gradient(90deg, #FF7AD9, #D946EF);
+}
+
+.article-card[data-category="anxiety"]::before {
+    background: linear-gradient(90deg, #FFA500, #FF7AD9);
+}
+
+.article-card[data-category="psychotic"]::before {
+    background: linear-gradient(90deg, #764ba2, #D946EF);
+}
+
+.article-card[data-category="work"]::before {
+    background: linear-gradient(90deg, #2AC9C9, #4F7CFF);
+}
+
+.article-card[data-category="trauma"]::before {
+    background: linear-gradient(90deg, #FF7AD9, #FFA500);
+}
+
+.article-card[data-category="personality"]::before {
+    background: linear-gradient(90deg, #667eea, #B36BFF);
+}
+
+.article-card[data-category="attention"]::before {
+    background: linear-gradient(90deg, #2AC9C9, #7EE7D2);
+}
+
+.article-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+}
+
+.article-header {
+    padding: 25px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #f0f3f7 100%);
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.article-header h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 12px 0 0 0;
+    color: #333;
+    line-height: 1.4;
+    font-family: 'Fraunces', serif;
+}
+
+.article-body {
+    padding: 25px;
+    flex-grow: 1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    max-height: 300px;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.article-card.expanded .article-body {
+    max-height: 2000px;
+}
+
+.article-body p {
+    margin-bottom: 15px;
+}
+
+.article-body h5 {
+    font-weight: 700;
+    color: #333;
+    margin-top: 18px;
+    margin-bottom: 12px;
+}
+
+.article-body ul,
+.article-body ol {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.article-body li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    animation: fade-in-up 0.6s ease-out;
+    position: relative;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.article-body li:hover {
+    left: 5px;
+    color: #667eea;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 0.9rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #667eea;
+    color: white;
+    font-weight: 600;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.badge-mood {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.badge-anxiety {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.badge-psychotic {
+    background-color: #f3e5f5;
+    color: #6a1b9a;
+}
+
+.badge-work {
+    background-color: #e0f2f1;
+    color: #004d40;
+}
+
+.badge-trauma {
+    background-color: #fce4ec;
+    color: #880e4f;
+}
+
+.badge-personality {
+    background-color: #ede7f6;
+    color: #3949ab;
+}
+
+.badge-attention {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}
+
+/* Read More Button */
+.btn-more {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 25px 25px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
+}
+
+.btn-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+}
+
+/* CTA Section */
+.cta-education {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #D946EF 100%);
+    padding: 60px 0;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.25);
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Fraunces', serif;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary-cta {
+    background: white;
+    color: #667eea;
+    padding: 12px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid white;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary-cta:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+}
+
+.btn-primary-cta i {
+    margin-right: 8px;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.footer-content a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* Education Animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes width-expand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-header .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-filters {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 6px 14px;
+        font-size: 0.9rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .article-body {
+        max-height: 350px;
+    }
+
+    .article-card.expanded .article-body {
+        max-height: 2000px;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-header {
+        padding: 40px 0;
+    }
+
+    .education-header .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-section {
+        padding: 20px 0;
+        top: 60px;
+    }
+
+    .education-content {
+        padding: 30px 0;
+    }
+
+    .category-filters {
+        flex-direction: column;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+
+    .btn-more {
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+    }
+}

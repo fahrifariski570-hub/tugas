@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CalmSpace - Edukasi kesehatan mental dan tips wellness">
+    <title>Edukasi - CalmSpace</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="education.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-brain"></i> CalmSpace
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="education.html">Edukasi</a></li>
+                </ul>
+                <div class="ms-3 auth-buttons">
+                    <div class="auth-hidden">
+                        <a href="login.html" class="btn btn-login">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Education Header -->
+    <section class="education-header">
+        <div class="container">
+            <div class="header-content">
+                <h1><i class="fas fa-book"></i> Pusat Edukasi Kesehatan Mental</h1>
+                <p>Pahami berbagai gangguan kesehatan mental dan cara mengatasinya</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari kondisi mental..." class="form-control">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="semua">Semua</button>
+                <button class="filter-btn" data-category="mood">Gangguan Mood</button>
+                <button class="filter-btn" data-category="anxiety">Kecemasan</button>
+                <button class="filter-btn" data-category="psychotic">Psikotik</button>
+                <button class="filter-btn" data-category="work">Kerja</button>
+                <button class="filter-btn" data-category="trauma">Trauma</button>
+                <button class="filter-btn" data-category="personality">Kepribadian</button>
+                <button class="filter-btn" data-category="attention">Perhatian</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Content -->
+    <section class="education-content">
+        <div class="container">
+            <div class="articles-grid">
+                <!-- 1. Depresi -->
+                <article class="article-card" data-category="mood">
+                    <div class="article-header">
+                        <span class="badge badge-mood">Gangguan Mood</span>
+                        <h3>Depresi (Gangguan Mood)</h3>
+                    </div>
+                    <div class="article-body">
+                        <h5>🔍 Gejala:</h5>
+                        <ul>
+                            <li>Sedih berkepanjangan</li>
+                            <li>Kehilangan minat (anhedonia)</li>
+                            <li>Lelah ekstrem</li>
+                            <li>Perasaan tidak berharga</li>
+                        </ul>
+                        <h5>⚠️ Penyebab/Faktor:</h5>
+                        <ul>
+                            <li>Ketidakseimbangan kimia otak (serotonin)</li>
+                            <li>Trauma dan faktor genetik</li>
+                            <li>Tekanan ekonomi dan lingkungan</li>
+                        </ul>
+                        <h5>💡 Cara Mengatasi:</h5>
+                        <ul>
+                            <li><strong>Psikoterapi (CBT)</strong> - perubahan pola pikir</li>
+                            <li><strong>Obat antidepresan</strong> - resep dokter</li>
+                            <li><strong>Dukungan sosial</strong> dan aktivitas fisik ringan</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-more" onclick="expandArticle(this)">Baca Selengkapnya</button>
+                </article>
+
+                <!-- 2. Anxiety Disorder -->
+                <article class="article-card" data-category="anxiety">
+                    <div class="article-header">
+                        <span class="badge badge-anxiety">Kecemasan</span>
+                        <h3>Anxiety (Gangguan Kecemasan)</h3>
+                    </div>
+                    <div class="article-body">
+                        <h5>🔍 Gejala:</h5>
+                        <ul>
+                            <li>Khawatir berlebihan</li>
+                            <li>Jantung berdebar</li>
+                            <li>Otot tegang</li>
+                            <li>Sulit tidur dan gelisah</li>
+                        </ul>
+                        <h5>⚠️ Penyebab/Faktor:</h5>
+                        <ul>
+                            <li>Stres kronis dan trauma masa lalu</li>
+                            <li>Faktor keturunan</li>
+                            <li>Konsumsi kafein/alkohol berlebih</li>
+                        </ul>
+                        <h5>💡 Cara Mengatasi:</h5>
+                        <ul>
+                            <li><strong>Teknik pernapasan</strong> dan meditasi</li>
+                            <li><strong>Terapi paparan</strong> untuk mengurangi fobia</li>
+                            <li><strong>Batasi pemicu stres</strong> dan istirahat cukup</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-more" onclick="expandArticle(this)">Baca Selengkapnya</button>
+                </article>
+
+                <!-- 3. Skizofrenia -->
+                <article class="article-card" data-category="psychotic">
+                    <div class="article-header">
+                        <span class="badge badge-psychotic">Psikotik</span>
+                        <h3>Skizofrenia (Gangguan Psikotik)</h3>
+                    </div>
+                    <div class="article-body">
+                        <h5>🔍 Gejala:</h5>
+                        <ul>
+                            <li>Halusinasi (mendengar/melihat yang tidak ada)</li>
+                            <li>Delusi (keyakinan salah)</li>
+                            <li>Bicara kacau dan perilaku aneh</li>
+                        </ul>
+                        <h5>⚠️ Penyebab/Faktor:</h5>
+                        <ul>
+                            <li>Genetik yang kuat</li>
+                            <li>Struktur otak yang berbeda</li>
+                            <li>Komplikasi kelahiran atau penggunaan narkoba</li>
+                        </ul>
+                        <h5>💡 Cara Mengatasi:</h5>
+                        <ul>
+                            <li><strong>Obat antipsikotik</strong> (wajib dan resep dokter)</li>
+                            <li><strong>Terapi psikososial</strong></li>
+                            <li><strong>Dukungan keluarga</strong> yang intens</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-more" onclick="expandArticle(this)">Baca Selengkapnya</button>
+                </article>
+
+                <!-- 4. Burnout -->
+                <article class="article-card" data-category="work">
+                    <div class="article-header">
+                        <span class="badge badge-work">Kerja</span>
+                        <h3>Burnout (Kelelahan Kerja)</h3>
+                    </div>
+                    <div class="article-body">
+                        <h5>🔍 Gejala:</h5>
+                        <ul>
+                            <li>Kelelahan fisik dan mental total</li>
+                            <li>Sikap sinis terhadap pekerjaan</li>
+                            <li>Merasa tidak kompeten</li>
+                        </ul>
+                        <h5>⚠️ Penyebab/Faktor:</h5>
+                        <ul>
+                            <li>Beban kerja terlalu berat</li>
+                            <li>Kurang kontrol atas pekerjaan</li>
+                            <li>Lingkungan kerja toksik</li>
+                        </ul>
+                        <h5>💡 Cara Mengatasi:</h5>
+                        <ul>
+                            <li><strong>Ambil cuti/istirahat</strong> berkala</li>
+                            <li><strong>Tetapkan batasan (boundaries)</strong> kerja</li>
+                            <li><strong>Delegasikan tugas</strong> dan atur prioritas</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-more" onclick="expandArticle(this)">Baca Selengkapnya</button>
+                </article>
+
+                <!-- 5. OCD -->
+                <article class="article-card" data-category="anxiety">
+                    <div class="article-header">
+                        <span class="badge badge-anxiety">Kecemasan</span>
+                        <h3>OCD (Obsessive-Compulsive Disorder)</h3>
+                    </div>
+                    <div class="article-body">
+                        <h5>🔍 Gejala:</h5>
+                        <ul>
+                            <li>Pikiran mengganggu yang berulang (obsesi)</li>
+                            <li>Perilaku berulang untuk mengurangi kecemasan (kompulsi)</li>
+                            <li>Contoh: cuci tangan berkali-kali, memeriksa pintu berulang</li>
+                        </ul>
+                        <h5>⚠️ Penyebab/Faktor:</h5>
+                        <ul>
+                            <li>Faktor genetik</li>
+                            <li>Kelainan fungsi otak (frontal cortex)</li>
+                            <li>Faktor lingkungan</li>
+                        </ul>
+                        <h5>💡 Cara Mengatasi:</h5>
+                        <ul>
+                            <li><strong>Terapi ERP</strong> (Exposure and Response Prevention)</li>
+                            <li><strong>Obat-obatan</strong> dari dokter (SSRI)</li>
+                            <li><strong>Terapi kognitif</strong> untuk pola pikir</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-more" onclick="expandArticle(this)">Baca Selengkapnya</button>
+                </article>
+
+                <!-- 6. PTSD -->
+                <article class="article-card" data-category="trauma">
+                    <div class="article-header">
+                        <span class="badge badge-trauma">Trauma</span>
+                        <h3>PTSD (Gangguan Stres Pascatrauma)</h3>
+                    </div>
+                    <div class="article-body">
+                        <h5>🔍 Gejala:</h5>
+                        <ul>
+                            <li>Flashback (teringat kejadian trauma)</li>
+                            <li>Mimpi buruk dan kewaspadaan berlebih</li>
+                            <li>Menghindari pemicu trauma</li>
+                        </ul>
+                        <h5>⚠️ Penyebab/Faktor:</h5>
+                        <ul>
+                            <li>Mengalami atau menyaksikan peristiwa traumatis</li>
+                            <li>Kecelakaan, perang, pelecehan, kehilangan</li>
+                        </ul>
+                        <h5>💡 Cara Mengatasi:</h5>
+                        <ul>
+                            <li><strong>Terapi EMDR</strong> (Eye Movement Desensitization and Reprocessing)</li>
+                            <li><strong>Psikoterapi trauma</strong> dan grounding techniques</li>
+                            <li><strong>Obat-obatan</strong> jika diperlukan</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-more" onclick="expandArticle(this)">Baca Selengkapnya</button>
+                </article>
+
+                <!-- 7. BPD -->
+                <article class="article-card" data-category="personality">
+                    <div class="article-header">
+                        <span class="badge badge-personality">Kepribadian</span>
+                        <h3>BPD (Borderline Personality Disorder)</h3>
+                    </div>
+                    <div class="article-body">
+                        <h5>🔍 Gejala:</h5>
+                        <ul>
+                            <li>Suasana hati sangat tidak stabil</li>
+                            <li>Takut ditinggalkan</li>
+                            <li>Hubungan interpersonal intens tapi goyah</li>
+                            <li>Citra diri berubah-ubah</li>
+                        </ul>
+                        <h5>⚠️ Penyebab/Faktor:</h5>
+                        <ul>
+                            <li>Trauma masa kecil (penelantaran/pelecehan)</li>
+                            <li>Faktor genetik</li>
+                            <li>Regulasi emosi di otak yang terganggu</li>
+                        </ul>
+                        <h5>💡 Cara Mengatasi:</h5>
+                        <ul>
+                            <li><strong>Terapi DBT</strong> (Dialectical Behavior Therapy) - standar emas</li>
+                            <li><strong>Psikoterapi individual</strong> dan terapi kelompok</li>
+                            <li><strong>Obat-obatan</strong> untuk gejala spesifik</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-more" onclick="expandArticle(this)">Baca Selengkapnya</button>
+                </article>
+
+                <!-- 8. ADHD -->
+                <article class="article-card" data-category="attention">
+                    <div class="article-header">
+                        <span class="badge badge-attention">Perhatian</span>
+                        <h3>ADHD (Attention-Deficit/Hyperactivity Disorder)</h3>
+                    </div>
+                    <div class="article-body">
+                        <h5>🔍 Gejala:</h5>
+                        <ul>
+                            <li>Sulit fokus dan perhatian terpecah</li>
+                            <li>Impulsif (bertindak tanpa pikir)</li>
+                            <li>Hiperaktif (tidak bisa diam)</li>
+                        </ul>
+                        <h5>⚠️ Penyebab/Faktor:</h5>
+                        <ul>
+                            <li>Faktor genetik yang kuat</li>
+                            <li>Perkembangan saraf yang berbeda</li>
+                            <li>Faktor lingkungan saat kehamilan</li>
+                        </ul>
+                        <h5>💡 Cara Mengatasi:</h5>
+                        <ul>
+                            <li><strong>Terapi perilaku</strong> dan pola pikir</li>
+                            <li><strong>Pengaturan struktur harian</strong> yang ketat</li>
+                            <li><strong>Obat stimulan</strong> (resep dokter)</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-more" onclick="expandArticle(this)">Baca Selengkapnya</button>
+                </article>
+
+                <!-- 9. Panic Attack -->
+                <article class="article-card" data-category="anxiety">
+                    <div class="article-header">
+                        <span class="badge badge-anxiety">Kecemasan</span>
+                        <h3>Panic Attack (Serangan Panik)</h3>
+                    </div>
+                    <div class="article-body">
+                        <h5>🔍 Gejala:</h5>
+                        <ul>
+                            <li>Sesak napas tiba-tiba</li>
+                            <li>Rasa seperti akan mati atau serangan jantung</li>
+                            <li>Gemetar, keringat dingin, pusing</li>
+                            <li>Terjadi mendadak tanpa peringatan</li>
+                        </ul>
+                        <h5>⚠️ Penyebab/Faktor:</h5>
+                        <ul>
+                            <li>Stres berat dan kecemasan tinggi</li>
+                            <li>Faktor genetik</li>
+                            <li>Bagian dari Panic Disorder</li>
+                        </ul>
+                        <h5>💡 Cara Mengatasi:</h5>
+                        <ul>
+                            <li><strong>Tarik napas dalam</strong> - teknik 4-7-8</li>
+                            <li><strong>Sadari tidak mematikan</strong> - serangan akan berlalu</li>
+                            <li><strong>Teknik grounding 5-4-3-2-1</strong> (gunakan 5 indera)</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-more" onclick="expandArticle(this)">Baca Selengkapnya</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-education">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ingin Mengetahui Kondisi Mental Anda?</h2>
+                <p>Ambil kuesioner mental kami yang dirancang oleh profesional kesehatan mental</p>
+                <div class="cta-buttons">
+                    <a href="quiz.html" class="btn btn-primary-cta">
+                        <i class="fas fa-clipboard-list"></i> Mulai Asesmen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 CalmSpace. Hak Cipta Dilindungi. | <a href="#">Kebijakan Privasi</a> | <a href="#">Syarat Layanan</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('keyup', filterArticles);
+
+        // Category filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                filterArticles();
+            });
+        });
+
+        function filterArticles() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const selectedCategory = document.querySelector('.filter-btn.active').dataset.category;
+            
+            document.querySelectorAll('.article-card').forEach(card => {
+                const category = card.dataset.category;
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const body = card.querySelector('.article-body').textContent.toLowerCase();
+                
+                const matchCategory = selectedCategory === 'semua' || category === selectedCategory;
+                const matchSearch = title.includes(searchTerm) || body.includes(searchTerm);
+                
+                card.style.display = matchCategory && matchSearch ? 'block' : 'none';
+            });
+        }
+
+        function expandArticle(button) {
+            const card = button.closest('.article-card');
+            const isExpanded = card.classList.contains('expanded');
+            
+            if (isExpanded) {
+                card.classList.remove('expanded');
+                button.textContent = 'Baca Selengkapnya';
+            } else {
+                card.classList.add('expanded');
+                button.textContent = 'Tampilkan Lebih Sedikit';
+                // Scroll ke artikel
+                setTimeout(() => {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
